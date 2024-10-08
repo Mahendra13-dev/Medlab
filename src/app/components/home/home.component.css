@@ -1,0 +1,29 @@
+.nav-link{
+    font-size: 13px;
+    font-weight: 700;
+}
+.cursor{
+    cursor:pointer;
+    
+}
+.heading{
+    font-size: 17px;
+    font-weight: 700;
+}
+.gradient-text {
+    background: linear-gradient(to right, #3790f7, hsl(0, 98%, 56%)); /* Gradient colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  .btn{
+  border-radius: 50px;
+  } 
+  .card2{
+    border-radius: 20px;
+  }
+  .text{
+    color:  rgb(34, 27, 80);
+    font-weight: 600;
+  }
