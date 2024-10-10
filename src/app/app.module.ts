@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './components/home/home.component';
+import { MedicinesHomeComponent } from './components/medicines-home/medicines-home.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    MedicinesHomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -27,3 +27,10 @@
     color:  rgb(34, 27, 80);
     font-weight: 600;
   }
+  .video{
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+  }
+
+ 

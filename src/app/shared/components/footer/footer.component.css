@@ -1,0 +1,8 @@
+.background{
+    background-image:url(../../../../assets/images/Backgroundimage.svg);
+    background-size: cover;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+  }

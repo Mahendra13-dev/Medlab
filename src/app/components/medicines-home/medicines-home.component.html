@@ -1,0 +1,51 @@
+<div class="container-fluid py-4 text-center text-light bg-primary">
+  <h3>Get Huge Savings on Medicines</h3>
+  <div class="d-flex justify-content-center">
+    <div class="p-2"><i class="bi bi-check-circle-fill mx-2"></i>100 % Genuine Medicines</div>
+    <div class="p-2"><i class="bi bi-check-circle-fill mx-2"></i>Trusted Pharmacie</div>
+    <div class="p-2"><i class="bi bi-check-circle-fill mx-2"></i>Delivery to your doorstep</div>
+    <div class="p-2"><i class="bi bi-check-circle-fill mx-2"></i>Store Pick up</div>
+  </div>
+</div>
+<div class="container-fluid w-75 search-box ">
+  <div class="input-group">
+    <span class="input-group-text p-2 bg-light">{{city}} {{pincode}}
+      <i class="bi bi-chevron-down ms-4 text-primary cursor fw-bold" data-bs-toggle="modal"
+        data-bs-target="#exampleModal"></i></span>
+    <input type="text" class="form-control mb-0" placeholder="Search Medicines" name="search"
+      [(ngModel)]="searchProduct" (ngModelChange)="searchProducts()">
+
+    <span class="input-group-text bg-light  cursor"> <i class="bi bi-search mx-2 text-primary fw-bold"></i>
+      <a class="mx-2 text-decoration-none">Search</a></span>
+  </div>
+  <ul class="list-group search-box m-auto" *ngIf="medicines.length >0">
+    <li class="list-group-item" *ngFor="let item of medicines">{{item.description}}</li>
+  </ul>
+  <div *ngIf="medicines.length === 0 && searchProduct.trim() !== ''">
+    <p>No medicines found for "{{ searchProduct }}".</p>
+  </div>
+
+</div>
+
+<div class="modal" tabindex="-1" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h5 class="text-center mb-0">Set Your Location</h5>
+        <div class="mb-3 mt-0">
+          <label for="id1" class="form-label ms-2 city-font">Pincode :</label>
+          <input type="text" class="form-control" id="id1" name="pin" [(ngModel)]="pincode"
+            (ngModelChange)="searchCityByPincode()">
+          <label class="form-label ms-2 city-font">{{city}}</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary ">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container w-75 mt-3"> 
+  <img src="https://www.medibuddy.in/assets/banners/medicine-page.webp" alt="" style="width: 100%;">
+</div>
